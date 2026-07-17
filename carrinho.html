@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Carrinho - Luxury Time</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. HEADER (Igual ao da Home para manter a identidade) -->
+    <header class="topo-loja">
+        <div class="logo"><a href="index.html" style="text-decoration: none; color: #d4af37;">LUXURY TIME</a></div>
+        
+                <!-- Menu do Topo na tela do Carrinho -->
+        <nav class="links-loja">
+            <a href="index.html">Coleções</a>
+            <a href="index.html#vitrine">Relógios</a> <!-- Volta para a home e desce para a vitrine -->
+        </nav>
+
+        <div class="carrinho-icone">
+            🛒 <span class="contador-itens">1</span>
+        </div>
+    </header>
+
+    <!-- 2. CONTEÚDO DO CARRINHO -->
+    <main class="container-carrinho">
+        <h1 class="titulo-pagina">Seu Carrinho de Compras</h1>
+
+        <div class="layout-carrinho">
+            
+            <!-- Tabela de Itens (Esquerda) -->
+            <div class="itens-carrinho">
+                <div class="cabecalho-tabela">
+                    <span>Produto</span>
+                    <span>Preço</span>
+                    <span>Quantidade</span>
+                    <span>Total</span>
+                </div>
+
+                <!-- Item 1 -->
+                <div class="linha-produto">
+                    <div class="produto-detalhe">
+                        <img src="relogio.png" alt="Relógio Gold">
+                        <div>
+                            <h3>Chronograph Gold</h3>
+                            <p>Série Limitada</p>
+                        </div>
+                    </div>
+                    <span class="preco-item">$ 1,250.00</span>
+                    <div class="seletor-qtd">
+                        <button>-</button>
+                        <span>1</span>
+                        <button>+</button>
+                    </div>
+                    <span class="total-item">$ 1,250.00</span>
+                </div>
+            </div>
+
+            <!-- Resumo do Pedido (Direita) -->
+            <div class="resumo-carrinho">
+                <h2>Resumo do Pedido</h2>
+                
+                <div class="linha-resumo">
+                    <span>Subtotal</span>
+                    <span>$ 1,250.00</span>
+                </div>
+                <div class="linha-resumo">
+                    <span>Frete Premium</span>
+                    <span class="frete-gratis">Grátis</span>
+                </div>
+                
+                <!-- Caixa de Cupom -->
+                <div class="caixa-cupom">
+                    <input type="text" placeholder="Código de desconto">
+                    <button>Aplicar</button>
+                </div>
+
+                <div class="linha-resumo total-geral">
+                    <span>Total</span>
+                    <span>$ 1,250.00</span>
+                </div>
+
+                <button class="btn-finalizar">Finalizar Compra</button>
+                <a href="index.html" class="btn-continuar">Continuar Comprando</a>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

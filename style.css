@@ -1,0 +1,578 @@
+/* RESET PADRÃO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0b0b0b; /* Preto quase puro de luxo */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #ffffff;
+}
+
+/* ESTILIZAÇÃO DO TOPO (HEADER) */
+.topo-loja {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Separa logo, menu e carrinho nas pontas */
+    align-items: center;
+    padding: 25px 5%;
+    background-color: rgba(11, 11, 11, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Linha divisória bem sutil */
+    position: fixed; /* Deixa o topo preso na tela enquanto o usuário desce */
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 3px; /* Letras mais espaçadas para parecer chique */
+    color: #d4af37; /* Cor Ouro */
+}
+
+.links-loja a {
+    text-decoration: none;
+    color: #cccccc;
+    margin: 0 20px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.links-loja a:hover {
+    color: #d4af37; /* Muda para ouro ao passar o mouse */
+}
+
+/* Atualize para garantir que a tag de link 'a' se comporte direitinho */
+.carrinho-icone {
+    font-size: 1.2rem;
+    cursor: pointer;      /* Faz o mouse virar a mãozinha */
+    position: relative;
+    display: inline-block; /* Garante que o link aceite o posicionamento do contador */
+    text-decoration: none; /* Remove qualquer sublinhado feio de link */
+}
+
+.contador-itens {
+    background-color: #d4af37;
+    color: #0b0b0b;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+/* BANNER PRINCIPAL (HERO) */
+.banner-principal {
+    width: 100%;
+    height: 100vh; /* Ocupa a altura inteira da tela inicial */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    background-color: #0b0b0b; /* Fundo preto puro chique */
+    padding-top: 80px;/* Espaço para o menu do topo não cobrir o conteúdo */
+}
+
+/* Área que controla a imagem do relógio */
+.banner-imagem {
+    max-width: 450px; /* Controla o tamanho máximo do relógio na tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-imagem img {
+    width: 100%;
+    height: auto;
+    /* Efeito de sombra sutil para dar profundidade ao relógio no fundo preto */
+    filter: drop-shadow(0px 10px 20px rgba(212, 175, 55, 0.2)); 
+}
+
+.banner-texto {
+    max-width: 550px;
+}
+
+.banner-texto .subtitulo {
+    color: #d4af37;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.banner-texto h1 {
+    font-size: 3rem;
+    font-weight: 300; /* Letra mais fina e moderna */
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.banner-texto p {
+    color: #aaaaaa;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.btn-descobrir {
+    display: inline-block;
+    text-decoration: none;
+    color: #0b0b0b;
+    background-color: #d4af37;
+    padding: 15px 35px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-descobrir:hover {
+    transform: translateY(-3px); /* Efeito flutuar de leve */
+    background-color: #f3cf5c;
+}
+
+/* 5. ESTILIZAÇÃO DA VITRINE E DOS PRODUTOS */
+.vitrine-produtos {
+    width: 100%;
+    padding: 80px 5%;
+    background-color: #0b0b0b;
+    text-align: center;
+}
+
+.titulo-vitrine {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+/* Cria a grade que alinha os produtos lado a lado automaticamente */
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px; /* Espaço entre os cartões */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* O cartão do produto com estilo de luxo minimalista */
+.card-produto {
+    background-color: #111111; /* Um cinza/preto um pouquinho mais claro que o fundo */
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 30px 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efeito luxuoso ao passar o mouse no cartão */
+.card-produto:hover {
+    transform: translateY(-5px);
+    border-color: rgba(214, 175, 87, 0.3); /* Acende uma bordinha dourada sutil */
+}
+
+.img-produto {
+    max-width: 180px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.card-produto h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.categoria {
+    font-size: 0.8rem;
+    color: #888888;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.preco-loja {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #d4af37; /* Preço em dourado */
+    margin-bottom: 20px;
+}
+
+/* Botão de adicionar ao carrinho chique */
+.btn-carrinho {
+    width: 100%;
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-carrinho:hover {
+    background-color: #ffffff;
+    color: #0b0b0b; /* Inverte as cores ao passar o mouse */
+    border-color: #ffffff;
+}
+
+/* 6. ESTILIZAÇÃO DO RODAPÉ (FOOTER) */
+.rodape-loja {
+    width: 100%;
+    background-color: #070707; /* Um preto ainda mais profundo para o fim do site */
+    padding: 60px 8px 20px 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Organiza as 4 colunas lado a lado e faz quebrar em celulares */
+.conteudo-rodape {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.coluna-rodape {
+    flex: 1;
+    min-width: 220px; /* Garante que as colunas fiquem em pé */
+}
+
+.coluna-rodape h4 {
+    color: #d4af37; /* Títulos do rodapé em dourado */
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.coluna-rodape p {
+    color: #777777;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+/* Estilo para as listas de links do rodapé */
+.coluna-rodape a {
+    display: block;
+    text-decoration: none;
+    color: #777777;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+}
+
+.coluna-rodape a:hover {
+    color: #ffffff; /* Acende em branco ao passar o mouse */
+}
+
+.titulo-pagamento {
+    margin-top: 25px;
+}
+
+.pagamento-icones {
+    color: #555555;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+/* Linha fina final de copyright */
+.direitos-autorais {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.direitos-autorais p {
+    color: #444444;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+/* 7. AJUSTE DE LUXO PARA CELULARES (RESPONSIVIDADE) */
+@media (max-width: 768px) {
+    /* Transforma o menu do topo em coluna para caber no celular */
+    .topo-loja {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 5%;
+    }
+
+    /* Alinha os links do menu lado a lado, mas permite que o bloco respire */
+    .links-loja {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; /* Faz os links irem para baixo de forma organizada se faltar espaço */
+        gap: 10px;
+    }
+
+    .links-loja a {
+        margin: 0 10px; /* Diminui a distância entre as palavras para caber melhor */
+        font-size: 0.8rem;
+    }
+
+    /* Ajusta o banner principal para não cortar o texto no celular */
+    .banner-principal {
+        flex-direction: column-reverse; /* Joga o relógio para cima do texto no celular, fica lindo! */
+        justify-content: center;
+        text-align: center;
+        padding-top: 140px;
+        height: auto;
+        min-height: 100vh;
+        gap: 30px;
+    }
+
+    .banner-texto h1 {
+        font-size: 2rem; /* Diminui o tamanho da letra no celular */
+    }
+
+    .banner-imagem {
+        max-width: 280px; /* Deixa o relógio menor em telas pequenas */
+    }
+}
+
+/* 8. TELA DE CARRINHO DE COMPRAS */
+.container-carrinho {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 140px 5% 60px 5%;
+    background-color: #0b0b0b;
+}
+
+.titulo-pagina {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 20px;
+}
+
+/* Divide a tela em duas colunas: itens na esquerda e resumo na direita */
+.layout-carrinho {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.itens-carrinho {
+    flex: 2;
+    min-width: 320px;
+}
+
+/* Estrutura de tabela moderna com Flexbox */
+.cabecalho-tabela {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #888888;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cabecalho-tabela span:first-child { flex: 2; }
+.cabecalho-tabela span:not(:first-child) { flex: 1; text-align: center; }
+
+.linha-produto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.produto-detalhe {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.produto-detalhe img {
+    max-width: 80px;
+    height: auto;
+}
+
+.produto-detalhe h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.produto-detalhe p {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.preco-item, .total-item {
+    flex: 1;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.total-item {
+    color: #d4af37;
+    font-weight: bold;
+}
+
+/* Seletor de quantidade chique */
+.seletor-qtd {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.seletor-qtd button {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* LATERAL DIREITA: RESUMO DE VALORES */
+.resumo-carrinho {
+    flex: 1;
+    min-width: 300px;
+    background-color: #111111;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    height: fit-content;
+}
+
+.resumo-carrinho h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.linha-resumo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    color: #cccccc;
+}
+
+.frete-gratis {
+    color: #25D366;
+    font-weight: bold;
+}
+
+.caixa-cupom {
+    display: flex;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.caixa-cupom input {
+    flex: 2;
+    background-color: #0b0b0b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    color: white;
+    border-radius: 4px;
+}
+
+.caixa-cupom button {
+    flex: 1;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.caixa-cupom button:hover {
+    background-color: white;
+    color: black;
+}
+
+.total-geral {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+}
+
+.total-geral span:last-child {
+    color: #d4af37;
+}
+
+.btn-finalizar {
+    width: 100%;
+    background-color: #d4af37;
+    color: black;
+    border: none;
+    padding: 15px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-finalizar:hover {
+    background-color: #f3cf5c;
+}
+
+.btn-continuar {
+    display: block;
+    text-align: center;
+    color: #888888;
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin-top: 15px;
+}
+
+.btn-continuar:hover {
+    color: white;
+}
+
+/* Responsividade rápida para a tabela do carrinho no celular */
+@media (max-width: 600px) {
+    .linha-produto {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .produto-detalhe { flex-direction: column; }
+}
+
